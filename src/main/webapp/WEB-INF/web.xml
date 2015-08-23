@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:web="http://java.sun.com/xml/ns/javaee" xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>HealthCarePOC</display-name>
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value>
+	</context-param>
+	<welcome-file-list>
+		<welcome-file>faces/index.xhtml</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<!-- Fitbit servlets -->
+
+	<servlet>
+		<servlet-name>FitbitProfileServlet</servlet-name>
+		<servlet-class>com.synavos.servlet.FitbitProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FitbitProfileServlet</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FitbitActivitesServlet</servlet-name>
+		<servlet-class>com.synavos.servlet.FitbitActivitesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FitbitActivitesServlet</servlet-name>
+		<url-pattern>/activites</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FitbitHeartRateServlet</servlet-name>
+		<servlet-class>com.synavos.servlet.FitbitHeartRateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FitbitHeartRateServlet</servlet-name>
+		<url-pattern>/heartrate</url-pattern>
+	</servlet-mapping>
+</web-app>
