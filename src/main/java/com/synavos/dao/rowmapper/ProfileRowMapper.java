@@ -21,7 +21,22 @@ public class ProfileRowMapper implements RowMapper<User> {
         user.distanceUnit = rs.getString("distanceUnit");
         user.encodedId = rs.getString("encodedId");
         user.foodsLocale = rs.getString("foodsLocale");
-        user.fullName = rs.getString("fullName");
+        user.gender = rs.getString("gender");
+        user.glucoseUnit = rs.getString("glucoseUnit");
+        user.height = rs.getString("height");
+        user.heightUnit = rs.getString("heightUnit");
+        user.locale = rs.getString("locale");
+        user.memberSince = rs.getString("memberSince");
+        user.offsetFromUTCMillis = rs.getString("offsetFromUTCMillis");
+        user.startDayOfWeek = rs.getString("startDayOfWeek");
+        user.strideLengthRunning = rs.getString("strideLengthRunning");
+        user.strideLengthWalking = rs.getString("strideLengthWalking");
+        user.timezone = rs.getString("timezone");
+        //user.topBadges = rs.getString("fullName");
+        user.waterUnit = rs.getString("waterUnit");
+        user.waterUnitName = rs.getString("waterUnitName");
+        user.weight = rs.getString("weight");
+        user.weightUnit = rs.getString("weightUnit");
         
         return user;
 	}

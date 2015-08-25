@@ -71,11 +71,7 @@ public class FitbitProfileServlet extends HttpServlet {
             System.out.println("Profile info from POJO= "+profile);
             
             System.out.println("Profile info from POJO user age = "+profile.user.age);
-            //TODO: Save application profile data
-            ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
-            ProfileDAO profileDAO = (ProfileDAO) context.getBean("profileDAOImpl");
-            profileDAO.insert(profile.user);
-            context.close();
+            
             out.println(responseProfile.getBody());
 
             requestOAuth = new OAuthRequest(Verb.GET,"https://api.fitbit.com/1/user/-/activities.json");
